@@ -1,0 +1,41 @@
+/* Компактніша сітка з ширшими колонками днів. */
+.hero__inner,
+.page {
+  width: min(1500px, calc(100% - 8px));
+}
+
+.schedule {
+  grid-template-columns: repeat(5, minmax(255px, 1fr));
+  gap: 4px;
+  padding-top: 18px;
+}
+
+.day { min-width: 255px; }
+
+.day:nth-child(5n + 1) { background: #cfe1ff; }
+.day:nth-child(5n + 2) { background: #ccefdc; }
+.day:nth-child(5n + 3) { background: #e7d5ff; }
+.day:nth-child(5n + 4) { background: #ffe5ac; }
+.day:nth-child(5n) { background: #ffcfdc; }
+.day .day__header { background: rgba(255, 255, 255, .55); }
+.day .lesson-option { background: rgba(255, 255, 255, .72); }
+.day .lesson__meta,
+.day .lesson-option__format,
+.day .teacher,
+.day .empty-lesson { color: #394865; }
+
+.access-code { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 8px; color: #52607d; font-size: .78rem; }
+.access-code strong { color: #17203b; letter-spacing: .04em; }
+.copy-code { padding: 4px 7px; border: 1px solid #cbd4ed; border-radius: 6px; color: #2947bd; background: #fff; font-size: .72rem; font-weight: 700; cursor: pointer; }
+.copy-code:hover { background: #eef1fa; }
+
+.lesson-option--odd { box-shadow: inset 3px 0 0 #15734a; }
+.lesson-option--even { box-shadow: inset 3px 0 0 #6846aa; }
+.badge--odd { color: #15734a; background: #dff4ea; }
+.badge--even { color: #6846aa; background: #f0e9ff; }
+
+@media (max-width: 680px) {
+  .hero__inner,
+  .page { width: min(100% - 8px, 1500px); }
+  .schedule { padding-top: 14px; }
+}

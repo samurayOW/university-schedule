@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3657d6" />
+    <title>Розклад АС-222</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./layout-overrides.css" />
+    <link rel="icon" href="./schedule.png" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__inner">
+        <p class="eyebrow">Навчальний розклад</p>
+        <h1 id="groupName">Розклад</h1>
+        <p class="hero__subtitle">
+          Усі пари та посилання на онлайн-конференції в одному місці.
+        </p>
+      </div>
+    </header>
+    <main class="page">
+      <section class="controls" aria-label="Налаштування відображення">
+        <div>
+          <p class="control-label">Зараз</p>
+          <p class="current-week" id="currentWeek" aria-live="polite"></p>
+        </div>
+        <div class="week-switch" role="group" aria-label="Фільтр тижня">
+          <button
+            class="week-switch__button is-active"
+            type="button"
+            data-filter="all"
+          >
+            Усі</button
+          ><button class="week-switch__button" type="button" data-filter="odd">
+            н/п</button
+          ><button class="week-switch__button" type="button" data-filter="even">
+            п
+          </button>
+        </div>
+      </section>
+      <section
+        id="schedule"
+        class="schedule"
+        aria-label="Розклад занять"
+      ></section>
+      <section class="notes-section" aria-labelledby="notesTitle">
+        <div class="section-heading">
+          <p class="eyebrow">Додаткова інформація</p>
+          <h2 id="notesTitle">Нотатки та доступи</h2>
+        </div>
+        <div id="notes" class="notes"></div>
+      </section>
+    </main>
+    <script src="./schedule-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
