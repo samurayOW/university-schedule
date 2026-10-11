@@ -34,26 +34,29 @@ const scheduleData = {
         {
           number: 3,
           time: "11:40–13:15",
-          options: [
-            {
-              week: "all",
-              format: "1–15 · практика",
-              subject: "Іноземна мова за професійним спрямуванням",
-              teacher: "д. Присяжнюк О.Я.",
-              conference: {
-                label: "Zoom",
-                url: "https://us04web.zoom.us/j/9611490865",
-              },
-              accessCode: "8C2VcE",
-            },
-          ],
+          options: [],
         },
         { number: 4, time: "13:30–15:05", options: [] },
       ],
     },
     {
       lessons: [
-        { number: 1, time: "08:00–09:35", options: [] },
+        {
+          number: 1,
+          time: "08:00–09:35",
+          options: [
+            {
+              week: "all",
+              format: "1–15 · практика",
+              subject: "Іноземна мова за професійним спрямуванням",
+              teacher: "д. Андрейкова І. Б.",
+              conference: {
+                label: "Meet",
+                url: "https://meet.google.com/aao-ecku-zsv",
+              },
+            },
+          ],
+        },
         {
           number: 2,
           time: "09:50–11:25",
